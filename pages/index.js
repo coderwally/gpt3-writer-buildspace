@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import { useState } from "react";
 import buildspaceLogo from "../assets/buildspace-logo.png";
 
 const Home = () => {
@@ -15,10 +16,10 @@ const Home = () => {
       <div className="container">
         <div className="header">
           <div className="header-title">
-            <h1>sup, insert your headline here</h1>
+            <h1>Generate a quote for socials</h1>
           </div>
           <div className="header-subtitle">
-            <h2>insert your subtitle here</h2>
+            <h2>type a subject and find matching quotes</h2>
           </div>
         </div>
         {/* Add this code here*/}
@@ -29,6 +30,13 @@ const Home = () => {
             value={userInput}
             onChange={onUserChangedText}
           />
+        </div>
+        <div className="prompt-buttons">
+          <a className="generate-button" onClick={null}>
+            <div className="generate">
+              <p>Generate</p>
+            </div>
+          </a>
         </div>
       </div>
       <div className="badge-container grow">
