@@ -267,7 +267,7 @@ textarea {
 
 .output-content p {
     text-align: center;
-    line-height: 0;
+    line-height: 1;
     color: rgba(255, 255, 255, 0.5);
 }
 

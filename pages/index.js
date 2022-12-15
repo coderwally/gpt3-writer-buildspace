@@ -1,7 +1,4 @@
-import Head from "next/head";
-import Image from "next/image";
 import React, { useState } from "react";
-import buildspaceLogo from "../assets/buildspace-logo.png";
 import Button from '@mui/material/Button';
 import { Link } from "@mui/material";
 
@@ -43,7 +40,7 @@ const Home = () => {
             <h1>Generate a quote for socials</h1>
           </div>
           <div className="header-subtitle">
-            <h2>type a subject and find matching quotes</h2>
+            <h2>type a subject and find up to three quotes</h2>
           </div>
         </div>
         <div className="prompt-container">
