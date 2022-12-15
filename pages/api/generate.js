@@ -6,15 +6,15 @@ const configuration = new Configuration({
 
 const openai = new OpenAIApi(configuration);
 
-const basePromptPrefix = "Write a positive quote about ";
-const basePromptPostfix = "Give the reader a positive feeling."
+const basePromptPrefix = "Find 3 positive quotes about ";
+const basePromptPostfix = " Give the reader a positive feeling."
 const generateAction = async (req, res) => {
   // Run first prompt
-  console.log(`API: ${basePromptPrefix}${req.body.userInput}`)
+  console.log(`API: ${basePromptPrefix}${req.body.userInput}${basePromptPostfix}`);
 
   const baseCompletion = await openai.createCompletion({
     model: 'text-davinci-003',
-    prompt: `${basePromptPrefix}${req.body.userInput}.`,
+    prompt: `${basePromptPrefix}${req.body.userInput}.${basePromptPostfix}`,
     temperature: 0.75,
     max_tokens: 350,
   });
